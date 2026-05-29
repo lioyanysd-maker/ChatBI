@@ -7,7 +7,7 @@
 ---
 
 ## 目录
-
+- [项目预览](#项目预览)
 - [功能特性](#功能特性)
 - [项目结构](#项目结构)
 - [环境要求](#环境要求)
@@ -21,6 +21,14 @@
 
 
 ---
+## 项目预览
+### 自然语言转 SQL
+<img width="1865" height="920" alt="image" src="https://github.com/user-attachments/assets/f3351a5e-d5cb-4712-b17f-f022fb0fd383" />
+<img width="1865" height="920" alt="image" src="https://github.com/user-attachments/assets/43120b7e-1e40-4f49-a301-48f37c503fca" />
+### 大模型与数据库配置
+<img width="1860" height="915" alt="image" src="https://github.com/user-attachments/assets/e9f49db8-83b9-4087-9938-4df7fff0bf3a" />
+### 能够理解上下文
+<img width="1802" height="920" alt="image" src="https://github.com/user-attachments/assets/98f114be-94f3-4df7-acc6-1e29355f50d0" />
 
 ## 功能特性
 
