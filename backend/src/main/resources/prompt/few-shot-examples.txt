@@ -1,0 +1,17 @@
+问题: 总共有多少个商品？
+SQL: SELECT COUNT(*) AS total FROM products LIMIT 100
+
+问题: 价格大于5000元的商品有哪些？
+SQL: SELECT name, category, price FROM products WHERE price > 5000 LIMIT 100
+
+问题: 每个分类的商品数量是多少？
+SQL: SELECT category, COUNT(*) AS cnt FROM products GROUP BY category LIMIT 100
+
+问题: 销售额最高的3个商品
+SQL: SELECT p.name, SUM(o.amount) AS total_sales FROM orders o JOIN products p ON o.product_id = p.id GROUP BY p.id, p.name ORDER BY total_sales DESC LIMIT 3
+
+问题: 上个月的订单总额
+SQL: SELECT SUM(amount) AS total FROM orders WHERE create_time >= DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 1 MONTH), '%Y-%m-01') AND create_time < DATE_FORMAT(CURDATE(), '%Y-%m-01') LIMIT 100
+
+问题: 按月统计销售额
+SQL: SELECT DATE_FORMAT(create_time, '%Y-%m') AS month, SUM(amount) AS total_sales FROM orders GROUP BY DATE_FORMAT(create_time, '%Y-%m') ORDER BY month LIMIT 100

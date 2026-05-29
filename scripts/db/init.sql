@@ -1,0 +1,6 @@
+-- 数据库初始化入口
+-- 请先创建数据库:
+--   CREATE DATABASE IF NOT EXISTS chatbi DEFAULT CHARSET utf8mb4;
+--
+-- 然后执行主 DDL（与 backend 保持同步）:
+--   mysql -u root -p chatbi < ../backend/src/main/resources/db/schema.sql

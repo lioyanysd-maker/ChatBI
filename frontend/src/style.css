@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --ds-bg: #ffffff;
+  --ds-sidebar: #f7f8fa;
+  --ds-surface: #ffffff;
+  --ds-text: #1f2329;
+  --ds-text-secondary: #8b8fa3;
+  --ds-border: #e5e7eb;
+  --ds-accent: #4d6bfe;
+  --ds-accent-hover: #3d5ae8;
+  --ds-user-bg: #edf0fd;
+  --ds-input-bg: #f7f8fa;
+  --ds-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --el-color-primary: #4d6bfe;
+  --el-color-primary-light-3: #7a91fe;
+  --el-color-primary-light-5: #a3b3fe;
+  --el-color-primary-light-7: #cbd4ff;
+  --el-color-primary-light-8: #dfe5ff;
+  --el-color-primary-light-9: #f0f3ff;
+  --el-color-primary-dark-2: #3d5ae8;
+  --el-border-radius-base: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', sans-serif;
+  background: var(--ds-bg);
+  color: var(--ds-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.ds-theme-dialog.el-dialog {
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
+}
+.ds-theme-dialog .el-dialog__header {
+  padding: 20px 24px 12px;
+  margin: 0;
+  border-bottom: 1px solid var(--ds-border);
+}
+.ds-theme-dialog .el-dialog__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ds-text);
+}
+.ds-theme-dialog .el-dialog__body {
+  padding: 20px 24px;
+}
+.ds-theme-dialog .el-dialog__footer {
+  padding: 12px 24px 20px;
+  border-top: 1px solid var(--ds-border);
+}
+
+.ds-theme-message-box.el-message-box {
+  border-radius: 16px;
+  padding-bottom: 16px;
+}
+.ds-theme-message-box .el-message-box__header {
+  padding-top: 20px;
+}
+.ds-theme-message-box .el-message-box__title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.ds-theme-message-box .el-button--primary {
+  background: var(--ds-accent);
+  border-color: var(--ds-accent);
+  border-radius: 10px;
+}
+
+.ds-theme-dropdown.el-popper {
+  border-radius: 12px !important;
+  border: 1px solid var(--ds-border) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+}
+.ds-theme-dropdown .el-dropdown-menu__item:hover,
+.ds-theme-dropdown .el-select-dropdown__item.hover {
+  background: #f0f3ff !important;
+  color: var(--ds-accent) !important;
+}
+
+.el-input__wrapper,
+.el-select .el-input__wrapper {
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px var(--ds-border) inset;
+}
+.el-input__wrapper:hover,
+.el-select .el-input__wrapper:hover {
+  box-shadow: 0 0 0 1px #c5cae9 inset;
+}
+.el-input__wrapper.is-focus,
+.el-select .el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 1px var(--ds-accent) inset !important;
+}
+
+.el-button--primary {
+  --el-button-bg-color: var(--ds-accent);
+  --el-button-border-color: var(--ds-accent);
+  --el-button-hover-bg-color: var(--ds-accent-hover);
+  --el-button-hover-border-color: var(--ds-accent-hover);
+  border-radius: 10px;
+}
+
+.el-table {
+  border-radius: 12px;
+  overflow: hidden;
+  --el-table-header-bg-color: #f7f8fa;
+  --el-table-border-color: var(--ds-border);
+}

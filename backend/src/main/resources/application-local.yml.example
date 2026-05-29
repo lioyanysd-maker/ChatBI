@@ -1,0 +1,19 @@
+# 本地开发配置示例
+# 复制为 application-local.yml 后填入真实值
+
+spring:
+  datasource:
+    username: root
+    password: your-mysql-password
+
+chatbi:
+  llm:
+    provider: deepseek
+    api-key: your-deepseek-api-key
+    model: deepseek-chat
+    base-url: https://api.deepseek.com/v1
+  security:
+    # 可选：接口鉴权 Key，前端需同步配置 VITE_CHATBI_API_KEY
+    api-key:
+    # 生产环境务必配置，用于加密数据源密码与 LLM Key（Base64 编码的 32 字节 AES 密钥）
+    encryption-key:

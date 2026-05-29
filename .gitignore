@@ -1,0 +1,47 @@
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# Java / Maven
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+*.war
+*.log
+hs_err_pid*
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.*.local
+
+# AI 中间产物
+ai-artifacts/generated/**
+!ai-artifacts/generated/.gitkeep
+
+# 环境与密钥（切勿提交）
+.env
+.env.local
+.env.*.local
+*.env
+!*.env.example
+application-local.yml
+backend/src/main/resources/application-local.yml
+
+# 测试库大数据 SQL
+scripts/test-db/03-seed-facts.sql
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cursor / 本地工具
+.cursor/
+mcps/
+agent-transcripts/
+terminals/

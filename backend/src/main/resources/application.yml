@@ -1,0 +1,51 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: chatbi-backend
+  profiles:
+    active: dev
+  config:
+    import: optional:classpath:application-local.yml
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:chatbi}?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      connection-timeout: 5000
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      database: ${REDIS_DATABASE:0}
+      timeout: 3000ms
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+chatbi:
+  cache:
+    redis-enabled: true
+  llm:
+    provider: deepseek
+    api-key: ${CHATBI_LLM_API_KEY:}
+    model: deepseek-chat
+    base-url: https://api.deepseek.com/v1
+    timeout-ms: 60000
+  sql:
+    max-limit: 1000
+    query-timeout-ms: 5000
+  cors:
+    allowed-origins: http://localhost:5173,http://127.0.0.1:5173
+  security:
+    api-key: ${CHATBI_API_KEY:}
+    query-cache-ttl-minutes: 15
+    encryption-key: ${CHATBI_ENCRYPTION_KEY:}
